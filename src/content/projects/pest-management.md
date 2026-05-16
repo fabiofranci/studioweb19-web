@@ -7,6 +7,7 @@ technologies:
   - JavaScript
   - PWA
 featured: true
+image: "/images/projects/pest-management/dashboard.jpg"
 ---
 
 # Pest Management
@@ -18,6 +19,32 @@ Il sistema nasce dall'esigenza di digitalizzare workflow operativi tipicamente g
 - fotografie sparse;
 - storico non centralizzato;
 - gestione manuale dei monitoraggi.
+
+
+## Contesto operativo
+
+Le aziende di disinfestazione gestiscono spesso attività operative distribuite sul territorio, con tecnici che lavorano presso:
+- aziende;
+- condomini;
+- strutture alimentari;
+- ambienti HACCP;
+- clienti privati.
+
+In molti casi i workflow vengono ancora gestiti tramite:
+- rapportini cartacei;
+- fotografie inviate manualmente;
+- archivi non centralizzati;
+- comunicazioni frammentate.
+
+## Problemi principali
+
+Le criticità operative più comuni includono:
+- perdita dello storico interventi;
+- difficoltà nella ricerca documentale;
+- gestione manuale dei PDF;
+- assenza di dashboard operative;
+- difficoltà nella tracciabilità HACCP;
+- tempi amministrativi elevati.
 
 ## Obiettivi del progetto
 
@@ -66,6 +93,18 @@ Il progetto è in fase di evoluzione verso:
 - API REST;
 - gestione offline-first;
 - sincronizzazione mobile avanzata.
+
+## Evoluzione architetturale
+
+Il progetto è attualmente in fase di evoluzione verso una nuova architettura basata su:
+- Laravel;
+- API REST;
+- frontend PWA;
+- workflow offline-first;
+- sincronizzazione mobile avanzata;
+- dashboard operative evolute.
+
+L'obiettivo è creare una piattaforma SaaS verticale ancora più orientata ai workflow sul campo e alla gestione documentale strutturata.
 
 ## Tecnologie e workflow correlati
 

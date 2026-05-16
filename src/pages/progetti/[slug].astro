@@ -40,6 +40,16 @@ const { Content } = await render(project);
                 {project.data.description}
             </p>
 
+{project.data.image && (
+
+    <img
+        src={project.data.image}
+        alt={project.data.title}
+        class="w-full rounded-2xl mb-12 border border-gray-200"
+    />
+
+)}
+
             <div class="flex flex-wrap gap-3 mb-10">
 
                 {project.data.technologies.map((tech) => (
