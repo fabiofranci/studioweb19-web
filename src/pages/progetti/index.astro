@@ -20,7 +20,11 @@ const projects = await getCollection('projects');
                 <article class="border rounded-2xl p-6">
 
                     <h2 class="text-2xl font-semibold mb-2">
-                        {project.data.title}
+
+                        <a href={`/progetti/${project.slug}`} class="hover:underline">
+                            {project.data.title}
+                        </a>
+
                     </h2>
 
                     <p class="text-gray-600">
