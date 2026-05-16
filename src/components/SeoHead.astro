@@ -1,18 +1,55 @@
 ---
+import { SITE } from '../lib/site';
+
 interface Props {
     title: string;
     description: string;
+    image?: string;
+    canonical?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+    title,
+    description,
+    image = '/og-image.jpg',
+    canonical,
+} = Astro.props;
+
+const canonicalUrl = canonical
+    ? `${SITE.url}${canonical}`
+    : Astro.url.href;
 ---
 
 <title>{title}</title>
 
 <meta name="description" content={description} />
 
+<link rel="canonical" href={canonicalUrl} />
+
+<meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={`${SITE.url}${image}`} />
 
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`${SITE.url}${image}`} />
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: SITE.author,
+        url: SITE.url,
+        jobTitle: 'Software Developer',
+        knowsAbout: [
+            'Laravel',
+            'Software gestionali',
+            'Workflow documentali',
+            'Data integration',
+            'SaaS',
+        ],
+    })}
+/>
