@@ -20,6 +20,17 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 
+const allPosts = await getCollection('blog');
+
+const relatedPosts = allPosts
+    .filter((p) =>
+        p.slug !== post.slug &&
+        p.data.tags.some((tag) =>
+            post.data.tags.includes(tag)
+        )
+    )
+    .slice(0, 3);
+
 const { Content } = await render(post);
 ---
 
@@ -36,15 +47,71 @@ const { Content } = await render(post);
                 {post.data.title}
             </h1>
 
-            <p class="text-gray-500 mb-10">
+            <p class="text-gray-500 mb-6">
                 {post.data.pubDate.toLocaleDateString('it-IT')}
             </p>
+
+            <div class="flex flex-wrap gap-2 mb-10">
+
+                {post.data.tags.map((tag) => (
+
+                    <a
+                        href={`/tags/${tag}`}
+                        class="text-sm bg-gray-100 px-3 py-1 rounded-full hover:bg-gray-200 transition"
+                    >
+                        {tag}
+                    </a>
+
+                ))}
+
+            </div>
 
             <div class="prose prose-lg max-w-none">
 
                 <Content />
 
             </div>
+
+            {relatedPosts.length > 0 && (
+
+                <section class="mt-20 pt-12 border-t border-gray-200">
+
+                    <h2 class="text-3xl font-bold mb-10">
+
+                        Articoli correlati
+
+                    </h2>
+
+                    <div class="space-y-8">
+
+                        {relatedPosts.map((related) => (
+
+                            <article>
+
+                                <h3 class="text-2xl font-semibold mb-2">
+
+                                    <a
+                                        href={`/blog/${related.slug}`}
+                                        class="hover:underline"
+                                    >
+                                        {related.data.title}
+                                    </a>
+
+                                </h3>
+
+                                <p class="text-gray-600 leading-relaxed">
+                                    {related.data.description}
+                                </p>
+
+                            </article>
+
+                        ))}
+
+                    </div>
+
+                </section>
+
+            )}
 
         </article>
 
