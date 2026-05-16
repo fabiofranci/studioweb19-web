@@ -27,3 +27,11 @@ Utilizzare:
 - queue jobs;
 - logging dettagliato;
 - importazioni idempotenti.
+
+## Progetti correlati
+
+Questi approcci vengono utilizzati in piattaforme operative reali come:
+
+- [Pest Management](/progetti/pest-management)
+- [GB Services](/progetti/gb-services)
+- [Archivium](/progetti/archivium)

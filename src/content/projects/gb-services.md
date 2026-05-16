@@ -75,3 +75,11 @@ La piattaforma ha permesso di:
 - migliorare la tracciabilità;
 - centralizzare lo storico operativo;
 - automatizzare la produzione documentale.
+
+## Workflow e integrazione
+
+Contenuti correlati:
+
+- [Software gestionali](/servizi/software-gestionali)
+- [Integrazione dati](/servizi/integrazione-dati)
+- [Come gestire importazioni massive in Laravel](/blog/gestire-importazioni-massive-laravel)

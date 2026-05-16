@@ -66,3 +66,11 @@ Il progetto è in fase di evoluzione verso:
 - API REST;
 - gestione offline-first;
 - sincronizzazione mobile avanzata.
+
+## Tecnologie e workflow correlati
+
+Approfondimenti collegati:
+
+- [Software gestionali](/servizi/software-gestionali)
+- [Integrazione dati](/servizi/integrazione-dati)
+- [Come gestire importazioni massive in Laravel](/blog/gestire-importazioni-massive-laravel)

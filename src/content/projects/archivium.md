@@ -81,3 +81,9 @@ L'evoluzione futura della piattaforma include:
 - integrazione API;
 - workflow automatizzati;
 - strumenti avanzati di consultazione documentale.
+
+## Approfondimenti correlati
+
+- [Software gestionali](/servizi/software-gestionali)
+- [Integrazione dati](/servizi/integrazione-dati)
+- [Come gestire importazioni massive in Laravel](/blog/gestire-importazioni-massive-laravel)
