@@ -1,19 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
 ---
 
-<Layout title="StudioWeb19">
+<Layout
+    title="StudioWeb19"
+    description="Sviluppo software gestionali, piattaforme cloud e sistemi verticali."
+>
 
-    <main class="max-w-5xl mx-auto px-6 py-20">
+    <section class="py-24">
 
-        <h1 class="text-5xl font-bold mb-6">
-            StudioWeb19
-        </h1>
+        <Container>
 
-        <p class="text-xl text-gray-600">
-            Sviluppo software gestionali, piattaforme cloud e sistemi verticali in Laravel.
-        </p>
+            <div class="max-w-3xl">
 
-    </main>
+                <p class="text-sm uppercase tracking-widest text-gray-500 mb-6">
+                    Laravel • SaaS • Workflow • Data Integration
+                </p>
+
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
+
+                    Sviluppo software gestionali e piattaforme cloud verticali.
+
+                </h1>
+
+                <p class="text-xl text-gray-600 leading-relaxed">
+
+                    Progetto e sviluppo sistemi web orientati a workflow operativi,
+                    importazione dati, document management, dashboard e SaaS verticali.
+
+                </p>
+
+            </div>
+
+        </Container>
+
+    </section>
 
 </Layout>

@@ -1,22 +1,50 @@
 ---
 import '../styles/global.css';
 
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import SeoHead from '../components/SeoHead.astro';
+
 interface Props {
     title?: string;
+    description?: string;
 }
 
-const { title = 'StudioWeb19' } = Astro.props;
+const {
+    title = 'StudioWeb19',
+    description = 'Software gestionali e piattaforme cloud sviluppate in Laravel.',
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <SeoHead
+        title={title}
+        description={description}
+    />
+
 </head>
 
-<body class="bg-white text-gray-900">
-    <slot />
+<body class="bg-white text-gray-900 antialiased">
+
+    <Navbar />
+
+    <main>
+        <slot />
+    </main>
+
+    <Footer />
+
 </body>
+
 </html>
