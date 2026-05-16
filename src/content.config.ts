@@ -1,17 +1,19 @@
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
+    loader: () => [],
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date(),
-        updatedDate: z.date().optional(),
+        pubDate: z.string(),
+        updatedDate: z.string().optional(),
         tags: z.array(z.string()).default([]),
         draft: z.boolean().default(false),
     }),
 });
 
 const projects = defineCollection({
+    loader: () => [],
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -21,6 +23,7 @@ const projects = defineCollection({
 });
 
 const services = defineCollection({
+    loader: () => [],
     schema: z.object({
         title: z.string(),
         description: z.string(),

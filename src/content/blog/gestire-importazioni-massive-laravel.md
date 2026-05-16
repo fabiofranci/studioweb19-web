@@ -1,7 +1,7 @@
 ---
 title: "Come gestire importazioni massive in Laravel"
 description: "Strategie per importare file XLS e PDF in modo affidabile."
-pubDate: 2026-05-16
+pubDate: "2026-05-16"
 tags:
   - Laravel
   - Importazioni
