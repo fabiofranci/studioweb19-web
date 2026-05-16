@@ -4,30 +4,65 @@ description: "Gestionale cloud per aziende di disinfestazione e pest control."
 technologies:
   - PHP
   - MySQL
+  - JavaScript
+  - PWA
 featured: true
 ---
 
 # Pest Management
 
-Pest Management è un software cloud sviluppato per aziende di disinfestazione.
+Pest Management è una piattaforma gestionale sviluppata per aziende di disinfestazione e pest control.
 
-Le funzionalità includono:
+Il sistema nasce dall'esigenza di digitalizzare workflow operativi tipicamente gestiti tramite:
+- rapportini cartacei;
+- fotografie sparse;
+- storico non centralizzato;
+- gestione manuale dei monitoraggi.
+
+## Obiettivi del progetto
+
+- centralizzare i dati operativi;
+- digitalizzare gli interventi;
+- ridurre il lavoro amministrativo;
+- migliorare la tracciabilità;
+- creare uno storico tecnico consultabile.
+
+## Funzionalità principali
 
 - rapportini digitali;
 - gestione interventi;
-- QR code condomini;
 - storico clienti;
-- gestione monitoraggi HACCP;
+- monitoraggi HACCP;
+- QR code condomini;
 - invio PDF automatico;
-- dashboard operative.
+- upload fotografie;
+- dashboard operative;
+- pianificazione tecnici.
 
-## Problema
+## Workflow operativo
 
-Molte aziende pest control gestiscono ancora:
-- rapportini cartacei;
-- fotografie sparse;
-- storico non centralizzato.
+1. L'ufficio pianifica gli interventi.
+2. Il tecnico riceve le attività da smartphone.
+3. Durante l'intervento vengono raccolti dati e fotografie.
+4. Il cliente firma digitalmente il rapportino.
+5. Il sistema genera automaticamente il PDF.
+6. Lo storico viene centralizzato e reso consultabile.
 
-## Soluzione
+## Aspetti tecnici
 
-Il sistema permette ai tecnici di lavorare da smartphone e sincronizzare automaticamente i dati.
+La piattaforma gestisce:
+- generazione PDF;
+- sincronizzazione dati;
+- gestione upload immagini;
+- workflow mobile;
+- storico interventi;
+- reportistica.
+
+## Evoluzione futura
+
+Il progetto è in fase di evoluzione verso:
+- architettura Laravel;
+- frontend PWA;
+- API REST;
+- gestione offline-first;
+- sincronizzazione mobile avanzata.

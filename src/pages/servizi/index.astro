@@ -1,42 +1,49 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/Container.astro';
+
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
 ---
 
 <Layout
     title="Servizi"
-    description="Servizi di sviluppo software e piattaforme cloud."
+    description="Servizi di sviluppo software e integrazione dati."
 >
 
     <Container>
 
         <section class="py-20">
 
-            <h1 class="text-4xl font-bold mb-10">
+            <h1 class="text-5xl font-bold mb-12">
                 Servizi
             </h1>
 
-            <div class="space-y-10">
+            <div class="space-y-8">
 
-                <article>
-                    <h2 class="text-2xl font-semibold mb-3">
-                        Software gestionali
-                    </h2>
+                {services.map((service) => (
 
-                    <p class="text-gray-600">
-                        Sviluppo di piattaforme operative verticali basate su Laravel.
-                    </p>
-                </article>
+                    <article class="border rounded-2xl p-8">
 
-                <article>
-                    <h2 class="text-2xl font-semibold mb-3">
-                        Importazione dati
-                    </h2>
+                        <h2 class="text-3xl font-semibold mb-4">
 
-                    <p class="text-gray-600">
-                        Workflow di importazione PDF, XLS, CSV e riconciliazione dati.
-                    </p>
-                </article>
+                            <a
+                                href={`/servizi/${service.slug}`}
+                                class="hover:underline"
+                            >
+                                {service.data.title}
+                            </a>
+
+                        </h2>
+
+                        <p class="text-gray-600 text-lg">
+                            {service.data.description}
+                        </p>
+
+                    </article>
+
+                ))}
 
             </div>
 
