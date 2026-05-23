@@ -8,7 +8,9 @@ technologies:
   - PDF generation
   - Mobile workflow
 featured: true
+image: "/images/projects/gb-services/dashboard.jpg"
 ---
+
 
 # GB Services
 

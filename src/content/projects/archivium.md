@@ -7,6 +7,8 @@ technologies:
   - FilamentPHP
   - PDF processing
   - Document workflow
+
+image: "/images/projects/archivium/dashboard.jpg"
 featured: true
 ---
 
