@@ -21,6 +21,15 @@ const projects = defineCollection({
     }),
 });
 
+const services = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+    }),
+});
+
 export const collections = {
     blog,
+    projects,
+    services,
 };
